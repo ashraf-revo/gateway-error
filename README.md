@@ -1,5 +1,8 @@
 # gateway-error
 error with spring cloud
+## steps to produce the error 
+1. `mvn clean native:compile -Pnative`
+2. `./target/gateway-error`
 
 ```
 Application run failed
