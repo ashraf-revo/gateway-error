@@ -1,5 +1,14 @@
 spring:
   application:
     name: gateway-error
-  cache:
-    type: CAFFEINE
+  cloud:
+    gateway:
+      routes:
+        - id: gateway
+          uri: https://example.org
+          predicates:
+            - Host= gateway.lcl
+        - id: home
+          uri: https://example.org
+          predicates:
+            - FHost= home.lcl
